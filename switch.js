@@ -39,17 +39,14 @@ mark_statement()
 //  1.ODD OR EVEN  WITH RANGE CHECKER
 
 function Odd_Even() {
-    let first_number = 29;
-    let second_number = 10;
-    let Total = first_number % second_number;
+    let first_number = 28;
+    let Total = first_number % 2;
     console.log(Total);
-    if (first_number % second_number == 9) {
-        console.log(`${Total} It Is Odd Number`);
-    } else if (Total == 0) {
+    if (first_number % 2 == 0) {
         console.log(`${Total} It Is Even Number`);
-    }
+    } 
     else {
-        console.log(`${Total} It Is Not A Odd Number(or) Even Number`);
+        console.log(`${Total} It Is  A Odd Number`);
     }
 }
 Odd_Even()
@@ -66,7 +63,7 @@ function calculator(){
     else if(symbol === "-"){
         console.log(`${Tamil - English} Subtraction`); 
     }
-    else if(symbol == "*"){
+    else if(symbol === "*"){
         console.log(`${Tamil * English} Multiplication`);  
     }
     else if(symbol === "/"){
@@ -88,7 +85,7 @@ function Number_category() {
     if (Glass_power > 100) {
         console.log(`It Is GreaterThan 70 and It is Positive `);
     }
-    else if (Glass_power <= 70 && Glass_power >= 1) {
+    else if (Glass_power <=100 && Glass_power >= 1) {
         console.log(`It IS 70 and It is Positive `);
     }
     else if (Glass_power == 0) {
@@ -162,12 +159,16 @@ Shapes()
 //7. Discount Calculator
 
 function Discount() {
-    let Amount = 0;
+    let Amount = 2500;
     if (Amount > 5000) {
-        console.log(`Congratulations You Has  20% Discount`);
+        let Discount=20;
+        let Total=(Amount*20)/100;
+        console.log(`Purchase${Amount} Discount${Total} Total_amount${Amount - Total} Congrantslation`);
     }
     else if (Amount >= 2000 && Amount <= 5000) {
-        console.log(`Congratulations You Has  10% Discount`);
+        let Discount=10;
+        let Total=(Amount*10)/100;
+        console.log(`Purchase ${Amount} Discount ${Total} Total_amount ${Amount - Total} Congrantslation`);
     }
     else if (Amount < 2000 && Amount >= 1000) {
         console.log(`Sorry Sir You Has No Discount`);
